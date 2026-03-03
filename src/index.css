@@ -1,12 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  /* Our Subtle & Pretty Palette */
-  --color-canvas: #FBFBF9;
-  --color-ink: #1A1A1A;
-  --color-muted: #6B7280;
-  --color-sage: #A3B18A;
-  --color-border-subtle: #E5E5E1;
+  --color-canvas: #FAF7F2;        /* Warm Cream */
+  --color-ink: #3D3D4E;           /* Deep Slate */
+  --color-sage: #8DA988;          /* Vibrant Sage */
+  --color-rose: #E6B8B8;          /* Dusty Rose */
+  --color-sky: #B8D1E6;           /* Airy Blue */
+  --color-peach: #E6D2B8;         /* Soft Peach */
+  --color-border-subtle: #E8E2D9;
+  --color-github: #6e5494;
+  --color-linkedin: #0077B5;
+  --color-gmail: #EA4335;
 
   /* Custom Animations */
   --animate-float: float 6s ease-in-out infinite;
@@ -32,10 +36,39 @@ body {
 ::selection {
   background: #A3B18A44;
 }
+/* Update the marquee to be smoother and responsive */
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
 .animate-marquee {
+  display: flex;
+  width: max-content; /* Critical for responsiveness */
   animation: marquee 30s linear infinite;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+.italic {
+  font-family: 'Playfair Display', serif; 
+  letter-spacing: -0.02em;
+  color: var(--color-sage);
+  opacity: 0.8;
+}
+
+.min-h-screen {
+  position: relative;
+}
+.min-h-screen::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.03; 
+  pointer-events: none;
+  z-index: 99;
 }
