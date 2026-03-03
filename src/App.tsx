@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform, type Variants } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowUpRight, ExternalLink, Award } from "lucide-react";
 import { useRef } from "react";
+import profilePic from "./assets/profile.jpeg";
 
 const containerVars: Variants = {
   animate: { transition: { staggerChildren: 0.12 } }
@@ -93,14 +94,22 @@ const App = () => {
     <div className="min-h-screen bg-canvas text-ink selection:bg-sage/20 font-sans overflow-x-hidden">
       {/* NAVIGATION */}
       <nav className="fixed top-0 w-full z-[100] px-4 md:px-8 py-4 md:py-6 flex justify-between items-center backdrop-blur-md bg-canvas/80 border-b border-border-subtle">
-        <div className="font-bold tracking-tighter text-lg md:text-2xl">
-          Kajal Mehta<span className="text-sage">.</span>
+        <div className="flex items-center gap-3 group cursor-pointer">
+          {/* Monogram from Public Folder */}
+          <img
+            src="/monogram.png"
+            alt="KM Logo"
+            className="h-8 w-8 md:h-10 md:w-10 object-contain transition-transform duration-700 group-hover:rotate-[360deg]"
+          />
+          {/* Minimalist Name */}
+          <span className="font-bold tracking-tighter text-lg md:text-xl hidden xs:block">
+            Kajal Mehta<span className="text-sage">.</span>
+          </span>
         </div>
 
-        {/* Links: Hidden on mobile, flex on tablet/desktop */}
         <div className="hidden sm:flex gap-4 md:gap-8 text-[9px] md:text-[11px] uppercase tracking-[0.2em] font-medium text-muted">
           <a href="#about" className="hover:text-ink transition-colors">About</a>
-          <a href="#experience" className="hover:text-ink transition-colors">Exp</a>
+          <a href="#experience" className="hover:text-ink transition-colors">Experience</a>
           <a href="#work" className="hover:text-ink transition-colors">Work</a>
           <a href="#contact" className="hover:text-ink transition-colors">Contact</a>
         </div>
@@ -155,7 +164,7 @@ const App = () => {
             <motion.div variants={itemVars} className="relative aspect-square max-w-sm ml-auto w-full group">
               <div className="absolute -inset-3 border border-sage/30 rounded-sm translate-x-3 translate-y-3 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-500" />
               <div className="relative h-full w-full bg-[#E5E5E1] overflow-hidden rounded-sm">
-                <img src="../src/assets/profile.jpeg" alt="Profile" className="w-full h-full object-cover  group-hover:grayscale-0 transition-all duration-700" />
+                <img src={profilePic} alt="Profile" className="w-full h-full object-cover  group-hover:grayscale-0 transition-all duration-700" />
                 <div className="absolute bottom-4 left-4 right-4 bg-canvas/90 backdrop-blur-sm rounded-sm p-3">
                   <p className="text-[10px] uppercase tracking-widest text-muted">VIT Bhopal — CGPA</p>
                   <p className="text-xl font-light tracking-tighter">8.87<span className="text-sage">/10</span></p>
@@ -390,7 +399,7 @@ const App = () => {
                 whileHover={{ scale: 0.98 }}
                 className="bg-rose/20 rounded-[2rem] p-8 border border-black/5 flex flex-col justify-between"
               >
-                <p className="text-[10px] uppercase tracking-widest font-bold text-rose-800/60">Digital Spaces [cite: 1]</p>
+                <p className="text-[10px] uppercase tracking-widest font-bold text-rose-800/60">Digital Spaces</p>
                 <div className="flex flex-col gap-3">
                   <a
                     href="https://linkedin.com/in/kajal-mehta-125a9628b/"
@@ -425,7 +434,7 @@ const App = () => {
             </div>
             {/* --- FLOATING RESUME BUTTON --- */}
             <motion.a
-              href="../src/assets/resume.pdf"
+              href="/resume.pdf"
               target="_blank"
               className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-[100] flex items-center gap-2 md:gap-3 px-4 py-3 md:px-6 md:py-4 bg-ink text-canvas rounded-full shadow-2xl hover:bg-sage hover:text-ink transition-all duration-500 group animate-soft-pulse"
             >
