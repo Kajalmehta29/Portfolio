@@ -11,7 +11,7 @@ const itemVars: Variants = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } }
 };
 
-const skills = ["SpringBoot", "Java", "React", "Flutter", "Python", "MySQL", "Postman", "Spring Security", "PHP", "Supabase"];
+const skills = ["HTML", "CSS", "JavaScript", "PHP", "SpringBoot", "Java", "React", "Flutter", "MySQL", "Postman", "Spring Security"];
 
 const experiences = [
   {
@@ -73,14 +73,22 @@ const projects = [
     color: "bg-rose/20",
     num: "02",
     link: "https://github.com/Kajalmehta29/DonateBridge"
+  },
+  {
+    title: "Astronomy Explorer",
+    desc: "A pure HTML, CSS, and JavaScript project that showcases major stars, constellations, and all planets with quick educational facts.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    color: "bg-sage/20",
+    num: "03",
+    link: "https://github.com/Kajalmehta29/astronomy-explorer"
   }
 ];
 
 const techStack = [
-  { cat: "Backend", items: ["SpringBoot", "Java", "PHP", "Python"], color: "bg-sky/40" },
+  { cat: "Backend", items: ["SpringBoot", "Java", "PHP"], color: "bg-sky/40" },
   { cat: "Frontend & Mobile", items: ["React", "Flutter", "HTML/CSS", "JavaScript"], color: "bg-rose/40" },
   { cat: "Database", items: ["MySQL"], color: "bg-sage/40" },
-  { cat: "Tools", items: ["Postman", "Git"], color: "bg-peach/40" },
+  { cat: "Tools", items: ["Postman", "Git", "Figma"], color: "bg-peach/40" },
 ];
 
 
@@ -167,7 +175,7 @@ const App = () => {
                 <img src={profilePic} alt="Profile" className="w-full h-full object-cover  group-hover:grayscale-0 transition-all duration-700" />
                 <div className="absolute bottom-4 left-4 right-4 bg-canvas/90 backdrop-blur-sm rounded-sm p-3">
                   <p className="text-[10px] uppercase tracking-widest text-muted">VIT Bhopal — CGPA</p>
-                  <p className="text-xl font-light tracking-tighter">8.87<span className="text-sage">/10</span></p>
+                  <p className="text-xl font-light tracking-tighter">8.97<span className="text-sage">/10</span></p>
                 </div>
               </div>
             </motion.div>
@@ -275,7 +283,7 @@ const App = () => {
                 <div className="flex items-center gap-6">
                   <p className="text-sm text-muted leading-relaxed">Pursuing a strong academic record with consistent hands-on project development.</p>
                   <div className="shrink-0 text-right">
-                    <p className="text-3xl font-light tracking-tighter">8.87</p>
+                    <p className="text-3xl font-light tracking-tighter">8.97</p>
                     <p className="text-[9px] uppercase tracking-widest text-sage">CGPA / 10</p>
                   </div>
                 </div>
