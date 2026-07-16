@@ -1,0 +1,187 @@
+.projects {
+    padding: 120px 0;
+}
+
+.projects-heading {
+    margin-bottom: 60px;
+}
+
+.projects-heading span {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.projects-heading h2 {
+    max-width: 720px;
+    font-size: clamp(2.4rem, 4vw, 3.5rem);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.projects-layout {
+
+    display: grid;
+
+    grid-template-columns: 280px minmax(0,1fr);
+
+    min-height: 760px;
+
+    border-radius: 32px;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,.75);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,.8);
+
+    box-shadow: 0 24px 60px rgba(0,0,0,.08);
+
+}
+
+.project-sidebar {
+
+    padding: 28px;
+
+    border-right: 1px solid var(--border-light);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    background: rgba(255,255,255,.55);
+
+}
+
+.project-viewer {
+
+    padding: 48px;
+
+    overflow-y: auto;
+
+    height: 760px;
+
+    scroll-behavior: smooth;
+
+}
+
+.drawer-section {
+
+    margin-top: 72px;
+
+}
+
+.drawer-section:first-child {
+
+    margin-top: 40px;
+
+}
+
+.drawer-section h3 {
+
+    font-size: 1.6rem;
+
+    margin-bottom: 24px;
+
+}
+
+.drawer-section p {
+
+    line-height: 1.9;
+
+    color: var(--text-secondary);
+
+}
+
+@media (max-width:1024px){
+
+.projects-layout{
+
+grid-template-columns:1fr;
+
+}
+
+.project-sidebar{
+
+border-right:none;
+
+border-bottom:1px solid var(--border-light);
+
+}
+
+.project-viewer{
+
+height:auto;
+
+overflow:visible;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.projects{
+
+padding:90px 0;
+
+}
+
+.projects-heading{
+
+text-align:center;
+
+}
+
+.projects-heading h2{
+
+font-size:2rem;
+
+}
+
+.project-viewer{
+
+padding:28px;
+
+}
+
+.project-sidebar{
+
+padding:20px;
+
+}
+
+}
+.project-viewer::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+.project-viewer::-webkit-scrollbar-track{
+
+background:transparent;
+
+}
+
+.project-viewer::-webkit-scrollbar-thumb{
+
+background:rgba(124,140,255,.25);
+
+border-radius:999px;
+
+}
+
+.project-viewer::-webkit-scrollbar-thumb:hover{
+
+background:rgba(124,140,255,.45);
+
+}

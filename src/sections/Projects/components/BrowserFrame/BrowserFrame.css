@@ -1,0 +1,138 @@
+.browser-frame{
+
+background:white;
+
+border-radius:26px;
+
+overflow:hidden;
+
+border:1px solid rgba(0,0,0,.06);
+
+box-shadow:var(--shadow-md);
+
+}
+
+.browser-toolbar{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+padding:14px 18px;
+
+background:#F8F9FC;
+
+border-bottom:1px solid rgba(0,0,0,.05);
+
+}
+
+.browser-controls{
+
+display:flex;
+
+gap:8px;
+
+}
+
+.browser-controls span{
+
+width:12px;
+
+height:12px;
+
+border-radius:50%;
+
+}
+
+.red{
+
+background:#FF5F57;
+
+}
+
+.yellow{
+
+background:#FEBC2E;
+
+}
+
+.green{
+
+background:#28C840;
+
+}
+
+.browser-navigation{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+color:#8B8B8B;
+
+}
+
+.browser-address{
+
+flex:1;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:8px;
+
+background:white;
+
+padding:8px 18px;
+
+border-radius:999px;
+
+font-size:13px;
+
+color:#707070;
+
+}
+
+.browser-body{
+
+background:white;
+
+}
+
+.browser-body img{
+
+display:block;
+
+width:100%;
+
+}
+.browser-frame.dark {
+
+    background: #111827;
+
+    border-color: #2B3445;
+
+}
+
+.browser-frame.dark .browser-toolbar {
+
+    background: #1B2332;
+
+    border-bottom: 1px solid #2B3445;
+
+}
+
+.browser-frame.dark .browser-address {
+
+    background: #2B3445;
+
+    color: white;
+
+}
