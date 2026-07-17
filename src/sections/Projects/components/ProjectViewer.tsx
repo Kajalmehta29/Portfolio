@@ -8,53 +8,53 @@ import ChallengeSection from "./ChallengeSection/ChallengeSection";
 import TechStack from "./TechStack/TechStack";
 
 interface Props {
-  project: Project;
+    project: Project;
 }
 
 const ProjectViewer = ({ project }: Props) => {
-  return (
-    <div className="project-viewer">
+    return (
+        <div className="project-viewer">
 
-      <ProjectHeader project={project} />
+            <ProjectHeader project={project} />
 
-      {project.coverImage && <ProjectHero
+            {project.coverImage && <ProjectHero
 
-image={project.coverImage}
+                image={project.coverImage}
 
-url={project.browserUrl}
+                url={project.browserUrl}
 
-theme={project.theme}
+                theme={project.theme}
 
-/>}
+            />}
 
-      <section className="drawer-section">
+            <section className="drawer-section">
 
-        <h3>Project Overview</h3>
+                <h3>Project Overview</h3>
 
-        <p>{project.overview}</p>
+                <p>{project.overview}</p>
 
-      </section>
+            </section>
 
-      <ProductWalkthrough
-    steps={project.walkthrough}
-    browserUrl={project.browserUrl}
-    theme={project.theme}
-/>
+            <ProductWalkthrough
+                steps={project.walkthrough}
+                browserUrl={project.browserUrl}
+                theme={project.theme}
+            />
 
-      <FeatureGrid
-        features={project.features}
-      />
+            <FeatureGrid
+                features={project.features}
+            />
 
-      <ChallengeSection
-        challenges={project.challenges}
-      />
+            <ChallengeSection
+                challenges={project.challenges}
+            />
 
-      <TechStack
-        tech={project.technologies}
-      />
+            <TechStack
+                tech={project.technologies}
+            />
 
-    </div>
-  );
+        </div>
+    );
 };
 
 export default ProjectViewer;

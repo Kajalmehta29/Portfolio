@@ -25,7 +25,7 @@ background:var(--mint);
 .project-item.active{
 
 background:var(--mint);
-
+border: var(--primary) 1px solid;
 box-shadow:var(--shadow-sm);
 
 }

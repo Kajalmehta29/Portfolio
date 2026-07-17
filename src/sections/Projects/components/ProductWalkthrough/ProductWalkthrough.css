@@ -27,7 +27,7 @@ display:flex;
 justify-content:center;
 
 gap:10px;
-
+transition:.25s;
 margin:26px 0;
 
 }
@@ -47,9 +47,9 @@ transition:.3s;
 }
 
 .progress-dot.active{
-
+border-radius:999px;
 background:var(--primary);
-
+width:24px;
 transform:scale(1.25);
 
 }

@@ -1,15 +1,15 @@
 .browser-frame{
-
 background:white;
-
 border-radius:26px;
-
 overflow:hidden;
-
 border:1px solid rgba(0,0,0,.06);
-
+transition:var(--transition);
 box-shadow:var(--shadow-md);
 
+}
+.browser-frame:hover{
+    transform:translateY(-3px);
+    box-shadow:var(--shadow-lg);
 }
 
 .browser-toolbar{

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import BrowserFrame from "../BrowserFrame/BrowserFrame";
-
+import { AnimatePresence, motion } from "framer-motion";
 import type { WalkthroughStep } from "../../../../data/projects";
 
 interface Props {
@@ -37,57 +37,65 @@ const ProductWalkthrough = ({ steps, browserUrl, theme }: Props) => {
 
       <BrowserFrame url={browserUrl} theme={theme}>
 
-        <img
-          src={step.image}
-          alt={step.title}
-          className="walkthrough-image"
-        />
+        <AnimatePresence mode="wait">
+
+          <motion.img
+            key={current}
+            src={step.image}
+            alt={step.title}
+            className="walkthrough-image"
+            initial={{ opacity: 0, x: 25 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -25 }}
+            transition={{ duration: 0.3 }}
+          />
+
+        </AnimatePresence>
 
       </BrowserFrame>
-<div className="walkthrough-controls">
+      <div className="walkthrough-controls">
 
-  <button
-    className="walkthrough-arrow"
-    onClick={previous}
-    aria-label="Previous screen"
-  >
-    <ChevronLeft size={20} />
-  </button>
+        <button
+          className="walkthrough-arrow"
+          onClick={previous}
+          aria-label="Previous screen"
+        >
+          <ChevronLeft size={20} />
+        </button>
 
-  <div className="walkthrough-progress">
+        <div className="walkthrough-progress">
 
-    {steps.map((_, index) => (
-      <span
-        key={index}
-        className={`progress-dot ${
-          index === current ? "active" : ""
-        }`}
-      />
-    ))}
+          {steps.map((_, index) => (
+            <span
+              key={index}
+              className={`progress-dot ${index === current ? "active" : ""
+                }`}
+            />
+          ))}
 
-  </div>
+        </div>
 
-  <button
-    className="walkthrough-arrow"
-    onClick={next}
-    aria-label="Next screen"
-  >
-    <ChevronRight size={20} />
-  </button>
+        <button
+          className="walkthrough-arrow"
+          onClick={next}
+          aria-label="Next screen"
+        >
+          <ChevronRight size={20} />
+        </button>
 
-</div>
+      </div>
 
-<div className="walkthrough-text">
+      <div className="walkthrough-text">
 
-  <span className="walkthrough-count">
-    Screen {current + 1} of {steps.length}
-  </span>
+        <span className="walkthrough-count">
+          Screen {current + 1} of {steps.length}
+        </span>
 
-  <h4>{step.title}</h4>
+        <h4>{step.title}</h4>
 
-  <p>{step.description}</p>
+        <p>{step.description}</p>
 
-</div>
+      </div>
 
     </section>
   );

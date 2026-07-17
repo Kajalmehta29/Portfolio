@@ -20,9 +20,9 @@ const Stats = () => {
 
       <div className="stat">
 
-        <h3>2+</h3>
+        <h3>5+</h3>
 
-        <span>Internships</span>
+        <span>Certifications</span>
 
       </div>
 
