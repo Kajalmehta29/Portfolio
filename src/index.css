@@ -11,11 +11,16 @@
   --color-github: #6e5494;
   --color-linkedin: #0077B5;
   --color-gmail: #EA4335;
+  --color-emerald: #50C878;
+  --color-amber: #FFBF00;
+  --color-blue: #1E90FF;
 
   /* Custom Animations */
   --animate-float: float 6s ease-in-out infinite;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -45,7 +50,7 @@ body {
 .animate-marquee {
   display: flex;
   width: max-content; /* Critical for responsiveness */
-  animation: marquee 30s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 
 html, body {
