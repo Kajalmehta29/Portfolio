@@ -1,0 +1,165 @@
+/* ===========================================
+   TIMELINE ITEM
+=========================================== */
+
+.timeline-item {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+
+  align-items: center;
+
+  margin-bottom: 2rem;
+}
+
+/* ---------- LEFT ---------- */
+
+.timeline-item.left .timeline-card {
+  grid-column: 1;
+  justify-self: end;
+}
+
+.timeline-item.left .timeline-spacer {
+  grid-column: 3;
+}
+
+/* ---------- RIGHT ---------- */
+
+.timeline-item.right .timeline-card {
+  grid-column: 3;
+  justify-self: start;
+}
+
+.timeline-item.right .timeline-spacer {
+  grid-column: 1;
+}
+
+/* ---------- Timeline Marker ---------- */
+
+.timeline-marker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  z-index: 5;
+}
+
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  background: var(--accent-color);
+
+  border: 4px solid white;
+
+  box-shadow:
+      0 0 0 8px rgba(99,102,241,.12),
+      0 0 28px rgba(99,102,241,.18);
+
+  transition: .35s ease;
+}
+
+.timeline-item:hover .timeline-dot{
+
+    transform:scale(1.15);
+
+    box-shadow:
+        0 0 0 10px rgba(99,102,241,.15),
+        0 0 35px rgba(99,102,241,.25);
+}
+
+/* ---------- Card Wrapper ---------- */
+
+.timeline-card{
+    position:relative;
+    width:100%;
+    max-width:500px;
+}
+
+/* ---------- Connector Line ---------- */
+
+.timeline-item.left .timeline-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-34px;
+    top:42px;
+
+    width:34px;
+    height:2px;
+
+    background:rgba(99,102,241,.22);
+}
+
+.timeline-item.right .timeline-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-34px;
+    top:42px;
+
+    width:34px;
+    height:2px;
+
+    background:rgba(99,102,241,.22);
+}
+
+/* Spacer */
+
+.timeline-spacer{
+    width:100%;
+}
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media (max-width: 900px) {
+
+  .timeline::before {
+    left: 28px;
+    transform: none;
+  }
+
+  .timeline-item {
+
+    grid-template-columns: 56px 1fr;
+
+    gap: 1rem;
+  }
+
+  .timeline-marker {
+    grid-column: 1;
+  }
+
+  .timeline-card {
+
+    grid-column: 2 !important;
+
+    justify-self: stretch;
+
+    max-width: 100%;
+  }
+
+  .timeline-spacer {
+    display: none;
+  }
+
+  .timeline-item.left .timeline-card::after,
+  .timeline-item.right .timeline-card::before {
+    display: none;
+  }
+
+  .timeline-dot {
+    width: 16px;
+    height: 16px;
+  }
+
+}

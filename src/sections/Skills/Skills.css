@@ -1,0 +1,37 @@
+.skills-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 120px 24px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.skill-card.large {
+    grid-column: span 2;
+}
+
+.skill-card.wide {
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card.large,
+    .skill-card.wide {
+        grid-column: span 1;
+    }
+}

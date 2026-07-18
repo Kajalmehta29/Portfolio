@@ -1,0 +1,46 @@
+.company-content{
+
+position:relative;
+
+max-width:520px;
+
+padding:1rem 0;
+
+cursor:pointer;
+}
+.company-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:flex-start;
+
+margin-bottom:1.5rem;
+}
+.company-content h3{
+
+font-size:2.3rem;
+
+font-weight:700;
+
+line-height:1.1;
+
+margin-bottom:.4rem;
+}
+.company-content h4{
+
+font-size:1.1rem;
+
+font-weight:500;
+
+opacity:.75;
+}
+.company-content>p{
+
+margin-top:2rem;
+
+line-height:2;
+
+max-width:85%;
+}

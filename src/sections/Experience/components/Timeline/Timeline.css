@@ -1,0 +1,74 @@
+/* ===========================================
+   TIMELINE
+=========================================== */
+
+.timeline {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4rem;
+}
+
+/* Main vertical line */
+
+.timeline::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+  bottom: 0;
+
+  transform: translateX(-50%);
+
+  width: 3px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(99,102,241,.25),
+    rgba(99,102,241,.08)
+  );
+}
+
+/* Hide old line */
+
+.timeline-line {
+  display: none;
+}
+
+/* Better spacing */
+
+.timeline>*{
+  position: relative;
+  z-index: 2;
+}
+
+/* Year labels (we'll add these later) */
+
+.timeline-year{
+
+  position:absolute;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  padding:.4rem .9rem;
+
+  border-radius:999px;
+
+  background:white;
+
+  font-size:.82rem;
+
+  font-weight:600;
+
+  color:var(--text-secondary);
+
+  box-shadow:0 8px 30px rgba(0,0,0,.05);
+}
