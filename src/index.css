@@ -67,6 +67,7 @@ html, body {
 
 .min-h-screen {
   position: relative;
+  z-index: 1;
 }
 .min-h-screen::before {
   content: "";
@@ -75,5 +76,5 @@ html, body {
   background-image: url("https://grainy-gradients.vercel.app/noise.svg");
   opacity: 0.03; 
   pointer-events: none;
-  z-index: 99;
+  z-index: -1;
 }

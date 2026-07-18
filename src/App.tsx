@@ -196,8 +196,7 @@ const App = () => {
     target: heroRef,
     offset: ["start start", "end start"],
   });
-  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "12%"]);
 
   return (
     <div className="min-h-screen bg-canvas text-ink selection:bg-sage/20 font-sans overflow-x-hidden">
@@ -244,7 +243,7 @@ const App = () => {
           className="min-h-screen flex items-center pt-24 relative"
         >
           <motion.div
-            style={{ y: heroY, opacity: heroOpacity }}
+            style={{ y: heroY }}
             variants={containerVars}
             initial="initial"
             animate="animate"
@@ -293,7 +292,7 @@ const App = () => {
               </motion.p>
               <motion.div variants={itemVars} className="flex flex-wrap gap-4">
                 <a
-                  href="#projects"
+                  href="#work"
                   className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-sage text-white font-medium hover:scale-105 hover:shadow-xl transition-all duration-300"
                 >
                   Explore Projects
