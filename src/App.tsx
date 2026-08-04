@@ -30,6 +30,10 @@ const skills = [
   "REST APIs",
   "MySQL",
   "MongoDB",
+  "PostgreSQL",
+  "Redis",
+  "Firebase",
+  "Docker",
   "Git",
   "GitHub",
   "Postman",
@@ -118,19 +122,35 @@ const projects = [
   },
 
   {
-    title: "Smart Health Assistant",
+    title: "BugFlow",
     type: "FULL STACK APPLICATION",
-    desc: "Developed a health assistant using Spring Boot and Flutter that processes symptoms and generates personalized recommendations through a modular backend architecture.",
+    desc: "Built a modern, high-performance issue tracker and sprint management system (lightweight Jira clone) featuring Scrum boards, dashboards, and role-based access control.",
     highlights: [
-      "REST APIs",
-      "Request Validation",
-      "Modular Backend",
-      "Flutter UI",
+      "Kanban Board with drag-and-drop transitions",
+      "JWT Auth & Role-Based Access Control",
+      "Redis caching for statistics retrieval",
+      "Dockerized PostgreSQL & Redis infra",
     ],
-    stack: ["Java", "Spring Boot", "Flutter"],
+    stack: ["Java", "Spring Boot", "React", "PostgreSQL", "Redis", "Docker"],
     color: "bg-rose/20",
     num: "02",
-    link: "https://github.com/Kajalmehta29/health-assistant", 
+    link: "https://github.com/Kajalmehta29/BugFlow",
+  },
+
+  {
+    title: "Zenith List",
+    type: "FULL STACK APPLICATION",
+    desc: "Developed a gamified productivity workspace and habit tracker that integrates interactive task boards, a sound-synthesized focus timer, and data visualization analytics.",
+    highlights: [
+      "Interactive Eisenhower Decision Matrix",
+      "Web Audio API sound synthesized Focus Timer",
+      "Real-time sync via Firebase & Firestore",
+      "Analytics dashboard with Chart.js charts",
+    ],
+    stack: ["React", "Vite", "Firebase", "Firestore", "Chart.js", "Framer Motion"],
+    color: "bg-emerald/20",
+    num: "03",
+    link: "https://github.com/Kajalmehta29/zenith-list-app",
   },
 
   {
@@ -145,7 +165,7 @@ const projects = [
     ],
     stack: ["HTML", "CSS", "JavaScript"],
     color: "bg-sage/20",
-    num: "03",
+    num: "04",
     link: "https://github.com/Kajalmehta29/astronomy-explorer",
   },
 ];
@@ -159,7 +179,7 @@ const techStack = [
   {
     cat: "Backend",
     color: "bg-rose/20",
-    items: ["Spring Boot", "PHP", "REST APIs"],
+    items: ["Spring Boot", "PHP", "REST APIs", "Redis"],
   },
   {
     cat: "Frontend",
@@ -169,7 +189,7 @@ const techStack = [
   {
     cat: "Mobile & Database",
     color: "bg-amber/20",
-    items: ["Flutter", "MySQL", "MongoDB"],
+    items: ["Flutter", "MySQL", "MongoDB", "PostgreSQL", "Firebase"],
   },
   {
     cat: "Developer Tools",
@@ -177,6 +197,7 @@ const techStack = [
     items: [
       "Git",
       "GitHub",
+      "Docker",
       "Postman",
       "VS Code",
       "IntelliJ IDEA",
@@ -377,7 +398,7 @@ const App = () => {
                     VIT Bhopal — CGPA
                   </p>
                   <p className="text-xl font-light tracking-tighter">
-                    8.97<span className="text-sage">/10</span>
+                    8.99<span className="text-sage">/10</span>
                   </p>
                 </div>
               </div>
