@@ -1504,7 +1504,7 @@ const App: React.FC = () => {
                 className={`text-sm sm:text-base font-light ${isDark ? "text-[#A3ADA3]" : "text-[#57534E]"
                   }`}
               >
-                Available for Software Engineering internships and full-time 2025/2026 roles. My inbox is always open.
+                Available for Software Engineering internships and full-time roles. My inbox is always open.
               </p>
 
               {/* Action Buttons: Email, Copy, Resume */}
