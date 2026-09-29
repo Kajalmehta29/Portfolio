@@ -1,80 +1,45 @@
 @import "tailwindcss";
 
 @theme {
-  --color-canvas: #FAF7F2;        /* Warm Cream */
-  --color-ink: #3D3D4E;           /* Deep Slate */
-  --color-sage: #8DA988;          /* Vibrant Sage */
-  --color-rose: #E6B8B8;          /* Dusty Rose */
-  --color-sky: #B8D1E6;           /* Airy Blue */
-  --color-peach: #E6D2B8;         /* Soft Peach */
-  --color-border-subtle: #E8E2D9;
-  --color-github: #6e5494;
-  --color-linkedin: #0077B5;
-  --color-gmail: #EA4335;
-  --color-emerald: #50C878;
-  --color-amber: #FFBF00;
-  --color-blue: #1E90FF;
-
-  /* Custom Animations */
-  --animate-float: float 6s ease-in-out infinite;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
+
 html {
   scroll-behavior: smooth;
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-:root {
-  background-color: var(--color-canvas);
-  color: var(--color-ink);
 }
 
 body {
   margin: 0;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
-}
-
-/* Custom selection color for that extra touch */
-::selection {
-  background: #A3B18A44;
-}
-/* Update the marquee to be smoother and responsive */
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-marquee {
-  display: flex;
-  width: max-content; /* Critical for responsiveness */
-  animation: marquee 40s linear infinite;
-}
-
-html, body {
-  max-width: 100%;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  position: relative;
-}
-.italic {
-  font-family: 'Playfair Display', serif; 
-  letter-spacing: -0.02em;
-  color: var(--color-sage);
-  opacity: 0.8;
+  transition: background-color 0.35s ease, color 0.35s ease;
 }
 
-.min-h-screen {
-  position: relative;
-  z-index: 1;
+h1, h2, h3, .font-display {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
 }
-.min-h-screen::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity: 0.03; 
-  pointer-events: none;
-  z-index: -1;
+
+::selection {
+  background: rgba(16, 185, 129, 0.22);
+  color: #064E3B;
+}
+
+.dark ::selection {
+  background: rgba(52, 211, 153, 0.3);
+  color: #ECFDF5;
+}
+
+/* Subtle architectural drafting texture */
+.bg-subtle-grid {
+  background-image: radial-gradient(rgba(180, 83, 9, 0.12) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.dark .bg-subtle-grid {
+  background-image: radial-gradient(rgba(52, 211, 153, 0.12) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
