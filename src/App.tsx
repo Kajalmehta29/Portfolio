@@ -51,39 +51,38 @@ interface ProjectItem {
 const projectsData: ProjectItem[] = [
   {
     num: "01",
-    title: "Smart Expense Splitter",
-    category: "Full-Stack Mobile Expense Engine",
-    problem:
-      "In group living, trips, and shared events, calculating multi-party debts leads to complex circular IOUs (e.g., Alice owes Bob, Bob owes Charlie, Charlie owes Alice), causing calculation disputes and messy manual reconciliations.",
-    solution:
-      "Built a full-stack mobile application featuring a graph-based debt simplification algorithm to collapse cyclic transactions into minimal net settlements, multi-group isolation (e.g., 'Goa Trip', 'Flat Rent'), and flexible equal or custom exact-amount splitting.",
-    contribution:
-      "Architected the Java Spring Boot REST API, implemented the debt simplification graph solver, developed the cross-platform Flutter mobile UI, enforced role-based access with stateless JWT tokens and BCrypt, and designed normalized MySQL schemas.",
-    techTokens: ["Java", "Spring Boot", "Flutter", "MySQL", "JWT Auth", "REST APIs"],
-    link: "https://github.com/Kajalmehta29/SmartExpenseSplitter",
-  },
-  {
-    num: "02",
     title: "BugFlow",
-    category: "AI-Powered Bug Triage & Sprint Platform",
+    category: "AI-Powered Issue-Tracking Platform",
     problem:
-      "Engineering teams waste hours sorting through disorganized issue backlogs and duplicate bug tickets phrased in varying terminology, compounded by slow manual triage and the cumbersome overhead of enterprise Jira setups.",
+      "Engineering teams waste hours sorting through disorganized issue backlogs and duplicate bug tickets phrased in varying terminology, compounded by slow manual triage and overhead.",
     solution:
-      "Engineered an enterprise-grade bug tracking and sprint platform with AI triage featuring semantic duplicate detection using the all-MiniLM-L6-v2 vector embedding model, Gemini root-cause analysis, automated code-fix suggestions, interactive Kanban tracking, and 4-tier RBAC (ADMIN, PM, DEV, TESTER).",
+      "Developed a full-stack issue-tracking platform to streamline team bug management, featuring sprint planning, Kanban workflows, and collaboration, integrated with Gemini and all-MiniLM-L6-v2 embeddings for semantic duplicate detection, automated bug classification, and AI-assisted code-fix suggestions.",
     contribution:
-      "Architected the Spring Boot 3.3 backend services, integrated LangChain4j & Gemini API with local embedding pipelines, configured Redis caching for dashboard statistics and duplicate results, containerized PostgreSQL with Docker Compose, and developed the React 19 frontend with interactive OpenAPI docs.",
+      "Designed secure REST APIs using Spring Boot and Spring Security with JWT authentication and role-based access control, integrating PostgreSQL and Redis for data management. Containerized the application using Docker and Docker Compose to simplify service setup and maintain consistent development environments.",
     techTokens: [
-      "Java 17",
-      "Spring Boot 3.3",
-      "React 19",
+      "Spring Boot",
+      "React",
       "PostgreSQL",
       "Redis",
       "Docker",
+      "JWT",
+      "Gemini",
       "all-MiniLM-L6-v2",
-      "Gemini API",
-      "OpenAPI",
     ],
     link: "https://github.com/Kajalmehta29/BugFlow",
+  },
+  {
+    num: "02",
+    title: "Expense Splitter",
+    category: "Cross-Platform Expense Management",
+    problem:
+      "In group living, trips, and shared events, calculating multi-party debts leads to complex circular IOUs, causing calculation disputes and messy manual reconciliations.",
+    solution:
+      "Developed a cross-platform expense management application to simplify group expense tracking, splitting, budgeting, and settlements, implementing graph-based debt simplification using net balances to minimize redundant settlement transactions among group members.",
+    contribution:
+      "Built secure Spring Boot REST APIs with JWT authentication and a normalized MySQL schema to manage users, groups, and transactions, delivering a responsive and intuitive mobile client in Flutter.",
+    techTokens: ["Spring Boot", "Flutter", "REST API", "JWT", "MySQL"],
+    link: "https://github.com/Kajalmehta29/SmartExpenseSplitter",
   },
   {
     num: "03",
@@ -127,23 +126,27 @@ const projectsData: ProjectItem[] = [
 const skillsData = [
   {
     category: "Languages",
-    skills: ["Java", "JavaScript", "PHP", "SQL", "HTML5/CSS3"],
+    skills: ["Java", "JavaScript", "PHP", "SQL", "HTML5", "CSS3"],
   },
   {
-    category: "Backend",
-    skills: ["Spring Boot", "REST APIs", "Redis", "Microservices Principles", "JWT Auth", "RBAC"],
+    category: "Frameworks & Backend",
+    skills: ["Spring Boot", "React", "REST APIs", "Redis", "Spring Security", "JWT Auth", "RBAC"],
   },
   {
     category: "Frontend & Mobile",
     skills: ["React", "Flutter", "Tailwind CSS", "Vite", "Responsive Design"],
   },
   {
-    category: "Databases & Storage",
-    skills: ["MySQL", "PostgreSQL", "MongoDB", "Firebase Firestore"],
+    category: "Databases",
+    skills: ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
   },
   {
     category: "Tools & DevOps",
-    skills: ["Git", "GitHub", "Docker", "Postman", "IntelliJ IDEA", "VS Code", "CI/CD Basics"],
+    skills: ["Git", "GitHub", "Docker", "Docker Compose", "Postman", "IntelliJ IDEA", "VS Code"],
+  },
+  {
+    category: "CS Fundamentals",
+    skills: ["OOP", "DSA", "DBMS", "Operating Systems", "Design Patterns"],
   },
 ];
 
@@ -152,15 +155,27 @@ const experiencesData = [
   {
     company: "Calanjiyam Consultancies and Technologies",
     role: "Junior Associate Developer",
-    period: "April 2025 — PRESENT",
+    period: "July 2025 — Present",
     location: "Remote",
     bullets: [
-      "Delivered 4 client software applications end-to-end from requirement discovery through to production deployment.",
-      "Built 3 production-grade ERP modules using PHP, JavaScript, and MySQL for daily business workflow automation.",
-      "Designed secure REST APIs and implemented Role-Based Access Control (RBAC) security protocols.",
-      "Optimized relational database schemas and indexed SQL queries for sub-second report generation.",
+      "Develop and maintain full-stack web applications across ERP, HRMS, matrimony, steel manufacturing, and ed-tech projects using PHP, JavaScript, React, and MERN stack technologies.",
+      "Analyze client requirements and technical documentation to translate business workflows into functional features, technical specifications, and application modules.",
+      "Build responsive frontend interfaces, implement backend business logic and REST APIs, and integrate database operations to deliver end-to-end application functionality.",
+      "Debug and resolve application issues, test features, support deployment and production troubleshooting, and maintain applications while collaborating with the development team.",
     ],
-    tech: ["PHP", "JavaScript", "MySQL", "REST APIs", "Git", "RBAC"],
+    tech: ["PHP", "JavaScript", "React", "MERN Stack", "MySQL", "REST APIs", "Git"],
+  },
+  {
+    company: "NullClass",
+    role: "Web Development Intern",
+    period: "June 2025 — Aug 2025",
+    location: "Remote",
+    bullets: [
+      "Developed a full-stack travel booking application using Java 17, Spring Boot, React, and MongoDB, implementing frontend components and REST APIs for trip search, user management, and booking workflows.",
+      "Implemented JWT-based authentication and authorization using Spring Security, integrated database operations with Spring Data MongoDB, and followed a layered backend architecture.",
+      "Debugged application issues, validated API responses and booking workflows, and refined application functionality to ensure reliable integration between frontend and backend services.",
+    ],
+    tech: ["Java 17", "Spring Boot", "React", "MongoDB", "Spring Security", "JWT", "REST APIs"],
   },
   {
     company: "GirlScript Summer of Code (GSSoC EXTD)",
@@ -168,7 +183,7 @@ const experiencesData = [
     period: "2024",
     location: "Open Source",
     bullets: [
-      "Ranked 81st nationwide among 5,000+ contributors (Top 1.6%) during the extended edition.",
+      "Achieved Global Rank 81 nationwide among 5,000+ contributors (Top 1.6%) during the extended edition.",
       "Contributed production features, bug fixes, and technical documentation across multiple repositories.",
       "Collaborated with project maintainers and global reviewers via GitHub pull requests and code reviews.",
     ],
@@ -188,24 +203,24 @@ const achievementsData = [
   },
   {
     title: "Production Client Delivery",
-    highlight: "4 Client Apps & 3 ERPs",
-    desc: "Delivered 4 enterprise client projects and engineered 3 ERP modules in active business use.",
+    highlight: "Client Applications & ERPs",
+    desc: "Delivered production client web applications and engineered robust modules across ERP, HRMS, and enterprise domains.",
     icon: Rocket,
     accentLight: "text-[#B45309]",
     accentDark: "text-[#F59E0B]",
   },
   {
-    title: "350+ Problems Solved",
+    title: "390+ Problems Solved",
     highlight: "Daily Consistency & Learning",
-    desc: "Maintained a dedicated problem-solving routine on LeetCode with 350+ problems completed, driven by continuous curiosity and disciplined daily practice.",
+    desc: "Maintained a dedicated problem-solving routine on LeetCode with 390+ Data Structures and Algorithms problems solved.",
     icon: Flame,
     accentLight: "text-[#D97706]",
     accentDark: "text-[#FBBF24]",
   },
   {
     title: "Academic Distinction",
-    highlight: "8.99 / 10 CGPA • VIT Bhopal",
-    desc: "Maintained an 8.99 GPA at VIT Bhopal University with high departmental standing in systems.",
+    highlight: "9.04 / 10 CGPA • VIT",
+    desc: "Maintained a 9.04 CGPA at Vellore Institute of Technology (VIT) with high departmental standing in systems.",
     icon: Medal,
     accentLight: "text-[#0F5132]",
     accentDark: "text-[#34D399]",
@@ -221,7 +236,7 @@ const achievementsData = [
   {
     title: "National Cadet Corps (NCC)",
     highlight: "'A' Certificate Holder",
-    desc: "Certified 'A' Certificate cadet, exemplifying leadership, drill discipline, crisis coordination, and civic service.",
+    desc: "NCC 'A' Certificate holder; participated in two NCC training camps, developing leadership, discipline, teamwork, and coordination skills.",
     icon: Shield,
     accentLight: "text-[#0F5132]",
     accentDark: "text-[#34D399]",
@@ -864,7 +879,7 @@ const App: React.FC = () => {
                       className={`text-xs font-mono ${isDark ? "text-[#A3ADA3]" : "text-[#D6CEC2]"
                         }`}
                     >
-                      VIT Bhopal University • 8.99 CGPA
+                      Vellore Institute of Technology • 9.04 CGPA
                     </p>
                   </div>
                 </div>
@@ -1355,7 +1370,7 @@ const App: React.FC = () => {
               >
                 Currently completing my Computer Science degree at{" "}
                 <strong className={isDark ? "text-[#F3F4F1]" : "text-[#1C1917]"}>
-                  VIT Bhopal University (8.99 CGPA)
+                  Vellore Institute of Technology (9.04 CGPA)
                 </strong>
                 , I bring a demonstrated foundation of academic excellence and leadership as an NCC 'A' Certificate
                 holder and District Olympiad Topper, combining disciplined execution with a drive for building resilient software.
@@ -1368,7 +1383,7 @@ const App: React.FC = () => {
               >
                 <GraduationCap className="w-4 h-4" />
                 <span className="font-bold">Education:</span>
-                <span>B.Tech in Computer Science & Engineering — VIT Bhopal (8.99 / 10 CGPA)</span>
+                <span>B.Tech in Computer Science & Engineering — Vellore Institute of Technology (9.04 / 10 CGPA)</span>
               </div>
             </div>
           </div>
